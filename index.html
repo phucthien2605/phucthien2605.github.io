@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chua lanh vcl</title>
+	<link rel="stylesheet" href="./style.css" />
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<!-- <script src="./script.js"></script> -->
+</head>
+
+<body>
+	<div>
+		<h1>Chua lanh</h1>
+	</div>
+	<div class="grid">
+		<div id="item">
+			<ul class="list">
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+				<li class="card"></li>
+			</ul>
+
+			<button class="stack">Stack</button>
+			<button class="spread">Spread</button>
+		</div>
+	</div>
+	<div id="content" class="dp-none">
+		<div>
+			<img src="heo.png" alt="heo" height="200px">
+			<p>Con Heo Cơ có thể ăn tiền nhà người ta</p>
+			<p id="number"></p>
+		</div>
+		<button id="back">Back</button>
+	</div>
+</body>
+
+</html>
+
+<script>
+	$('.stack').click(function () {
+		$(".card").each(function (e) {
+			setTimeout(function () {
+				$(".card").eq(e).attr("class", "card");
+			}, e * 150)
+		});
+
+	});
+
+	$('.spread').click(function () {
+		$(".card").each(function (e) {
+			setTimeout(function () {
+				$(".card").eq(e).attr("class", "card ani" + e);
+			}, e * 150)
+		});
+	});
+
+	$('.card').click(function () {
+		let num = getRandomInt(10)
+		$('#item').addClass("dp-none")
+		$('#content').removeClass("dp-none")
+		$('#number').append(num)
+	});
+
+	$('#back').click(function () {
+		$('#item').removeClass("dp-none")
+		$('#content').addClass("dp-none")
+	});
+
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * max);
+	}
+</script>
