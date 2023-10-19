@@ -35,9 +35,7 @@
 	</div>
 	<div id="content" class="dp-none">
 		<div>
-			<img src="heo.png" alt="heo" height="200px">
-			<p>Con Heo Cơ có thể ăn tiền nhà người ta</p>
-			<p id="number"></p>
+			<img id="result_image" alt="heo" height="200px">
 		</div>
 		<button id="back">Back</button>
 	</div>
@@ -64,7 +62,8 @@
 	});
 
 	$('.card').click(function () {
-		let num = getRandomInt(10)
+		let num = getRandomInt(50)
+		document.getElementById("result_image").src="./card/"+num+".svg";
 		$('#item').addClass("dp-none")
 		$('#content').removeClass("dp-none")
 		$('#number').append(num)
