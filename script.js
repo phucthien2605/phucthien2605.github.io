@@ -1,17 +1,12 @@
-document.getElementsByClassName('.stack').addEventListener('click', function() {
-  var cards = document.querySelectorAll('.card');
-  cards.forEach(function(card, index) {
-    setTimeout(function() {
-      card.className = 'card';
-    }, index * 150);
-  });
-});
+function toggleContent() {
+  let stack = document.getElementById('stack');
+  let spread = document.getElementById('spread');
 
-document.getElementsByClassName('.spread').addEventListener('click', function() {
-  var cards = document.querySelectorAll('.card');
-  cards.forEach(function(card, index) {
-    setTimeout(function() {
-      card.className = 'card ani' + index;
-    }, index * 150);
-  });
-});
+  if (stack.classList.contains('display-none')) {
+    stack.classList.remove('display-none');
+    spread.classList.add('display-none');
+  } else {
+    stack.classList.add('display-none');
+    spread.classList.remove('display-none');
+  }
+}

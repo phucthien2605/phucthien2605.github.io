@@ -6,13 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Chua lanh</title>
 	<link rel="stylesheet" href="./style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<!-- <script src="./script.js"></script> -->
+	<script src="./script.js"></script>
 </head>
 
 <body>
 	<div>
-		<h1>Chua lanh</h1>
+		<h1 class="text-center title">CHỮA LÀNH</h1>
+	</div>
+	<div>
+		<button id="spread" class="spread" onclick="toggleContent()">Spread</button>
+		<button id="stack" class="stack display-none" onclick="toggleContent()">Stack</button>
 	</div>
 	<div class="grid">
 		<div id="item">
@@ -28,16 +33,12 @@
 				<li class="card"></li>
 				<li class="card"></li>
 			</ul>
-
-			<button class="stack">Stack</button>
-			<button class="spread">Spread</button>
 		</div>
 	</div>
 	<div id="content" class="dp-none">
 		<div class="result">
 			<img id="result_image" alt="thong_diep" height="800px">
 		</div>
-		<button id="back">Back</button>
 	</div>
 </body>
 
@@ -63,7 +64,7 @@
 
 	$('.card').click(function () {
 		let num = getRandomInt(50)
-		document.getElementById("result_image").src="./card/"+num+".svg";
+		document.getElementById("result_image").src = "./card/" + num + ".svg";
 		$('#item').addClass("dp-none")
 		$('#content').removeClass("dp-none")
 		$('#number').append(num)

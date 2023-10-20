@@ -1,10 +1,18 @@
-.grid {
-	width: 1170px;
-	margin: 0 auto;
+body {
+	background-image: url('./images/background.jpg');
 }
 
+.title {
+    font-family: 'Playfair Display', serif;
+}
+
+/* .grid {
+	width: auto;
+	margin: 0 auto;
+} */
+
 .list {
-	height: 652px;
+	height: 90vh;
 	position: relative;
 	list-style-type: none;
 	padding-left: 0;
@@ -31,8 +39,8 @@
 	-moz-transform-style: preserve-3d;
 
 	float: left;
-	width: 222px;
-	height: 311px;
+	width: 200px;
+	height: 280px;
 	/* background-color: #eee; */
 	background-image: url("./2.svg");
 	background-size: cover;
@@ -93,3 +101,41 @@
 	}
 
 }
+
+.stack, .spread {
+	width: 100px;
+	height: 40px;
+	border: 1px solid #f0c4b3;
+	background: #ede2da;
+	border-radius: 5px;
+	margin-left: 100px;
+}
+
+.display-none {
+	display: none;
+}
+
+/* scroll */
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #999;
+  }
+  
