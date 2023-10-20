@@ -56,7 +56,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="content" class="dp-none">
+	<div id="content_result" class="dp-none">
 		<div class="result">
 			<img id="result_image" alt="thong_diep" height="800px">
 		</div>
@@ -87,13 +87,14 @@
 		let num = getRandomInt(50)
 		document.getElementById("result_image").src = "./card/" + num + ".svg";
 		$('#item').addClass("dp-none")
-		$('#content').removeClass("dp-none")
-		$('#number').append(num)
+		$('#introduce').addClass("dp-none")
+		$('#content_result').removeClass("dp-none")
 	});
 
 	$('#back').click(function () {
 		$('#item').removeClass("dp-none")
-		$('#content').addClass("dp-none")
+		$('#introduce').removeClass("dp-none")
+		$('#content_result').addClass("dp-none")
 	});
 
 	function getRandomInt(max) {
