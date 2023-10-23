@@ -1,14 +1,15 @@
 html {
-	scroll-behavior: smooth;
 	/*Adds smooth scrolling instead of snapping to element*/
+	scroll-behavior: smooth;
 }
 
 body {
 	background-image: url('./images/background.jpg');
+	background-size: cover;
 }
 
 .intro {
-	height: 1000px;
+	height: fit-content;
 	text-align: center;
 	padding: 20px;
 }
@@ -23,28 +24,14 @@ body {
 
 .go-down {
 	font-size: 50px !important;
-	width: 20px;
-	text-align: center;
-	margin: auto;
-	position: absolute;
-	bottom: 0px;
-	left: 49.5%;
+}
+
+.icon-go-down {
+	text-decoration: none !important;
 }
 
 .title {
-    font-family: 'Playfair Display', serif;
-}
-
-/* .grid {
-	width: auto;
-	margin: 0 auto;
-} */
-
-.list {
-	height: 90vh;
-	position: relative;
-	list-style-type: none;
-	padding-left: 0;
+	font-family: 'Playfair Display', serif;
 }
 
 .dp-none {
@@ -53,92 +40,58 @@ body {
 
 .result {
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
+#pack_cont {
+	margin: 30px auto;
+	border-radius: 10px;
+	height: 85vh;
+}
+
+/*single card*/
 .card {
-
-	transition: all 1s cubic-bezier(0.68, -.55, .265, 1.55);
-
-	perspective: 1000;
-	-ms-transform: perspective(1000px);
-	-moz-transform: perspective(1000px);
-	-ms-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-
-	float: left;
-	width: 200px;
-	height: 280px;
-	/* background-color: #eee; */
+	width: 100px;
+	height: 140px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	position: absolute;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	text-align: center;
 	background-image: url("./2.svg");
 	background-size: cover;
-  	background-position: center;
 
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	margin: 30px 0 15px 15px;
-	border-radius: 10px;
+	/*all transition to take 1s */
+	transition: all 1s;
+	-ms-transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 
-	&:nth-child(5n) {
-		margin-right: 0;
-	}
+	/*set card transform origin to 20% from x-axis and 80% from y-axis */
+	transform-origin: 20% 80%;
+	-ms-transform-origin: 20% 80%;
+	-webikit-transform-origin: 20% 80%;
+	-moz-transform-origin: 20% 80%;
 
-	&.ani0 {
-		right: 948px;
-		bottom: 326px;
-	}
-
-	&.ani1 {
-		right: 711px;
-		bottom: 326px;
-	}
-
-	&.ani2 {
-		right: 474px;
-		bottom: 326px;
-	}
-
-	&.ani3 {
-		right: 237px;
-		bottom: 326px;
-	}
-
-	&.ani4 {
-		right: 0;
-		bottom: 326px;
-	}
-
-	&.ani5 {
-		right: 948px;
-		bottom: 0;
-	}
-
-	&.ani6 {
-		right: 711px;
-		bottom: 0;
-	}
-
-	&.ani7 {
-		right: 474px;
-		bottom: 0;
-	}
-
-	&.ani8 {
-		right: 237px;
-		bottom: 0;
-	}
-
+	/*make card non selectable*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-.stack, .spread {
+.stack,
+.spread,
+.btn-back {
 	width: 100px;
 	height: 40px;
 	border: 1px solid #f0c4b3;
 	background: #ede2da;
 	border-radius: 5px;
-	margin-left: 100px;
 }
 
 .display-none {
@@ -150,22 +103,21 @@ body {
 ::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
 	background: #f1f1f1;
 	border-radius: 5px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
 	background: #ccc;
 	border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
 	background: #999;
-  }
-  
+}
