@@ -9,7 +9,7 @@ body {
 }
 
 .intro {
-	height: fit-content;
+	height: 100vh;
 	text-align: center;
 	padding: 20px;
 }
@@ -120,4 +120,11 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #999;
+}
+
+@media (max-width: 768px) {
+	.intro {
+		height: fit-content;
+	}
+	
 }
