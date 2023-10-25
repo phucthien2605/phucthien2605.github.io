@@ -12,82 +12,78 @@
 
 <body>
 	<div id="introduce" class="intro">
-		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptatem deserunt quibusdam assumenda
-			quod minima atque accusamus ex reiciendis, sint fugit ipsum praesentium debitis repellendus rerum ratione,
-			porro maxime! Expedita.</h1>
-		<h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab tempore veritatis, et, doloremque ratione iusto
-			cum debitis doloribus sint quae sit asperiores, eligendi aliquid expedita laboriosam culpa deleniti hic id.
-		</h2>
-		<h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis harum voluptas eius ex recusandae.
-			Recusandae impedit nisi facere tenetur quasi hic, quisquam deserunt adipisci sequi doloremque aspernatur
-			pariatur deleniti illo.</h3>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, quod? Nam aliquid quod esse debitis. Enim
-			blanditiis sed eum nihil perferendis cumque impedit quidem quasi sunt! Aliquid temporibus illum quo.</p>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum dignissimos inventore esse temporibus,
-			cupiditate voluptatem similique.</p>
-		<div id="down" class="go-down">
-			<a href="#content" class="icon-go-down">⌄</a>
+		<image src="images/logo.png" height="70px" width="70px" />
+		<p class="title">Lời giới thiệu</p>
+		<div class="content-intro">
+			<p class="text-left">Đứa trẻ nội tâm là một phần cá tính được hình thành từ các trải nghiệm có ở thời ấu thơ
+				và ảnh hưởng rất lớn
+				đối với phong cách sống của con người cho đến khi trưởng thành. Đứa trẻ nội tâm của chúng ta vừa đầy sức
+				sống, cũng vừa mang không ít tổn thương. Lẽ hiển nhiên, đứa trẻ khi đó vẫn còn quá nhỏ để có thể tự chăm
+				sóc, chữa lành cho những tổn thương của bản thân. Và theo thời gian khi chúng ta ngày càng lớn, những
+				tổn thương cũ cùng với phần tâm trí trẻ con đầy sức sống ấy cũng ngày càng chìm sâu vào trong tâm trí
+				chúng
+				ta dù con người cố gắng bọc những tổn thương đó để trở nên trưởng thành hơn. Tuy nhiên, tổn thương vẫn
+				còn
+				và mỗi chúng ta vẫn luôn đấu tranh với tư tưởng của chính mình.
+			</p>
+			<p class="text-left">Vì lí do đó, chúng mình đã ra mắt bộ bài “về” với mong muốn mang khái niệm này tới gần
+				hơn với mọi người,
+				thông qua đó đóng góp vào quá trình chữa lành tổn thưởng đứa trẻ nội tâm của nhứng người sử dụng.
+			</p>
 		</div>
-	</div>
-	<div id="content">
-		<div>
-			<h1 class="text-center title">CHỮA LÀNH</h1>
-		</div>
-		<div>
-			<button id="back" class="btn-back dp-none">Back</button>
-			<button id="stack" class="stack display-none" onclick="reset_cards()">Stack</button>
-			<button id="spread" class="spread" onclick="separate_one_by_one()">Spread</button>
-		</div>
-		<div id='pack_cont'>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-			<div class='card'></div>
-		</div>
-	</div>
-	</div>
-	<div id="content_result" class="dp-none">
-		<div class="result">
-			<img id="result_image" alt="thong_diep" height="#content_result">
+		<div class="gr-button">
+			<a href="#instruct" class="btn-overview">Tổng quan</a>
+			<a href="#list-card" class="btn-try">Thử ngay </a>
 		</div>
 	</div>
 
-	<script type="text/javascript" src='/jquery.min.js'></script>
-	<script src="./script.js"></script>
+	<div id="instruct">
+		<p class="title">Hướng dẫn</p>
+		<image src="images/logo.png" height="50%" width="50%" />
+	</div>
+
+	<div id="content">
+		<div id="list-card">
+			<div>
+				<image src="images/cards.png" class='card' height="50%" width="50%" />
+			</div>
+			<div>
+				<image src="images/button-select.png" class='card' height="50%" width="50%" />
+			</div>
+		</div>
+
+		<div id="content_result" class="dp-none">
+			<div class="bg-result">
+				<img id="result_bg1" class="dp-none" src="/images/bg-card1.png" alt="thong_diep1"  width="50%">
+				<img id="result_bg2" class="dp-none" src="/images/bg-card2.png" alt="thong_diep2" height="50%" width="50%">
+				<img id="result_bg3" class="dp-none" src="/images/bg-card3.png" alt="thong_diep3" height="50%" width="50%">
+			</div>
+			<div class="result">
+				<img id="result_image" alt="thong_diep" width="50%">
+			</div>
+		</div>
+	</div>
+
 </body>
 
 </html>
-
 <script>
-
 	$('.card').click(function () {
 		let num = getRandomInt(50)
 		document.getElementById("result_image").src = "./card/" + num + ".svg";
-		$('#pack_cont').addClass("dp-none")
-		$('#introduce').addClass("dp-none")
+		if (num <= 30) {
+			$('#result_bg1').removeClass("dp-none")
+		} else if (num <= 40) {
+			$('#result_bg2').removeClass("dp-none")
+		} else {
+			$('#result_bg3').removeClass("dp-none")
+		}
+		$('#list-card').addClass("dp-none")
 		$('#content_result').removeClass("dp-none")
-		$('#stack').addClass("dp-none")
-    	$('#spread').addClass("dp-none")
 		$('#back').removeClass('dp-none');
-	});
-
-	$('#back').click(function () {
-		$('#item').removeClass("dp-none")
-		$('#introduce').removeClass("dp-none")
-		$('#content_result').addClass("dp-none")
-		$('#pack_cont').removeClass("dp-none")
-		$('#back').addClass('dp-none');
-		$('#stack').removeClass("dp-none")
-    	$('#spread').removeClass("dp-none")
 	});
 
 	function getRandomInt(max) {
 		return Math.floor(Math.random() * max);
 	}
-</script>
+</script> 

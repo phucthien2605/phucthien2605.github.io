@@ -4,97 +4,94 @@ html {
 }
 
 body {
-	background-image: url('./images/background.jpg');
+	background-image: url('./images/background.png');
 	background-size: cover;
 }
 
 .intro {
 	height: fit-content;
+	padding: 20px;
 	text-align: center;
-	padding: 20px;
-}
-
-.intro h1 p {
-	padding: 20px;
-}
-
-#content {
-	padding: 20px;
-}
-
-.go-down {
-	font-size: 50px !important;
-}
-
-.icon-go-down {
-	text-decoration: none !important;
+	margin-top: 50px;
 }
 
 .title {
-	font-family: 'Playfair Display', serif;
+	font-family: 'quicksand', arial;
+	color: #93b6bb;
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.intro .content-intro {
+	margin: 0 auto;
+	width: 80%;
+	font-size: 20px;
+	font-family: "YADK36WKZLc 0", _fb_, auto;
+}
+
+.intro .gr-button {
+	margin-top: 50px;
+}
+
+.intro .gr-button .btn-overview,
+.intro .gr-button .btn-try {
+	border-radius: 20px;
+	padding: 13px 7%;
+	text-decoration: none;
+}
+
+.intro .gr-button .btn-overview a,
+.intro .gr-button .btn-try a {
+	text-decoration: none;
+	color: #000;
+}
+
+.intro .gr-button .btn-overview {
+	background: #bedfe4;
+	margin-right: 20%;
+}
+
+.intro .gr-button .btn-try {
+	background: #1c2143;
+	color: #fff;
+}
+
+#content,
+#instruct {
+	margin: 50px auto;
+	width: 80%;
+	text-align: center;
+}
+
+.card {
+	cursor: pointer;
+}
+
+.background {
+	position: relative;
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	top: -160px;
+	left: -10px;
+	z-index: 2;
+	background-color: #93b6bb;
+}
+
+.bg-result {
+	position: relative;
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	z-index: 1;
+}
+
+#result_image {
+	border-radius: 13px;
 }
 
 .dp-none {
-	display: none;
-}
-
-.result {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#pack_cont {
-	margin: 30px auto;
-	border-radius: 10px;
-	height: 85vh;
-}
-
-/*single card*/
-.card {
-	width: 100px;
-	height: 140px;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	position: absolute;
-	background-repeat: no-repeat;
-	cursor: pointer;
-	text-align: center;
-	background-image: url("./2.svg");
-	background-size: cover;
-
-	/*all transition to take 1s */
-	transition: all 1s;
-	-ms-transition: all 1s;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-
-	/*set card transform origin to 20% from x-axis and 80% from y-axis */
-	transform-origin: 20% 80%;
-	-ms-transform-origin: 20% 80%;
-	-webikit-transform-origin: 20% 80%;
-	-moz-transform-origin: 20% 80%;
-
-	/*make card non selectable*/
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.stack,
-.spread,
-.btn-back {
-	width: 100px;
-	height: 40px;
-	border: 1px solid #f0c4b3;
-	background: #ede2da;
-	border-radius: 5px;
-}
-
-.display-none {
 	display: none;
 }
 
