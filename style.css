@@ -1,3 +1,8 @@
+@font-face {
+	font-family: essay1743;
+	src: url(Essays1743.ttf);
+  }
+
 html {
 	/*Adds smooth scrolling instead of snapping to element*/
 	scroll-behavior: smooth;
@@ -13,6 +18,7 @@ body {
 	padding: 20px;
 	text-align: center;
 	margin-top: 50px;
+	font-family: "essay1743", sans-serif;
 }
 
 .title {
@@ -27,7 +33,7 @@ body {
 	margin: 0 auto;
 	width: 80%;
 	font-size: 20px;
-	font-family: "YADK36WKZLc 0", _fb_, auto;
+	font-family: "essay1743", auto;
 }
 
 .gr-button {
