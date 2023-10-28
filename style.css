@@ -5,7 +5,7 @@ html {
 
 body {
 	background-image: url('./images/background.png');
-	background-size: cover;
+	background-size: initial;
 }
 
 .intro {
@@ -30,31 +30,52 @@ body {
 	font-family: "YADK36WKZLc 0", _fb_, auto;
 }
 
-.intro .gr-button {
+.gr-button {
 	margin-top: 50px;
 }
 
-.intro .gr-button .btn-overview,
-.intro .gr-button .btn-try {
+.gr-button .btn-overview,
+.gr-button .btn-try, 
+.gr-button .btn-back {
 	border-radius: 20px;
-	padding: 13px 7%;
+	padding: 13px;
 	text-decoration: none;
 }
 
-.intro .gr-button .btn-overview a,
-.intro .gr-button .btn-try a {
+.gr-button .btn-overview a,
+.gr-button .btn-try a,
+.gr-button .btn-back a {
 	text-decoration: none;
 	color: #000;
 }
 
-.intro .gr-button .btn-overview {
+.gr-button .btn-overview {
 	background: #bedfe4;
 	margin-right: 20%;
 }
 
-.intro .gr-button .btn-try {
+.gr-button .btn-try, 
+.gr-button .btn-back, 
+.gr-button .icon-instruct {
 	background: #1c2143;
 	color: #fff;
+}
+
+.icon-try, .icon-back {
+	background: #bedfe4;
+	color: #000;
+}
+
+.icon-instruct, .icon-try, .icon-back {
+	padding: 3px 9px;
+	border-radius: 50%;
+	margin-left: 20px;
+	font-family: monospace, serif;
+	font-size: 18px;
+}
+
+.icon-back {
+	margin: 0 20px 0 0;
 }
 
 #content,
@@ -68,27 +89,23 @@ body {
 	cursor: pointer;
 }
 
-.background {
+.result {
 	position: relative;
-	width: 50%;
-	height: auto;
+	height: 445px;
+	width: 300px;
 	margin: 0 auto;
-	top: -160px;
-	left: -10px;
+	bottom: 376px;
+	left: -25px;
 	z-index: 2;
-	background-color: #93b6bb;
 }
 
 .bg-result {
 	position: relative;
-	width: 50%;
-	height: auto;
 	margin: 0 auto;
 	z-index: 1;
-}
-
-#result_image {
-	border-radius: 13px;
+	background-size: cover;
+	height: 450px;
+	width: 303px;
 }
 
 .dp-none {
