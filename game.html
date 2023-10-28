@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Về</title>
 	<link rel="stylesheet" href="./style.css" />
@@ -18,8 +18,14 @@
 				<image src="images/cards.png" class='card' />
 			</div>
 			<div>
-				<image src="images/button-select.png" class='card'/>
+				<image src="images/button-select.png" class='card' />
 			</div>
+		</div>
+
+		<div class="loader dp-none">
+			<span class="loader__element"></span>
+			<span class="loader__element"></span>
+			<span class="loader__element"></span>
 		</div>
 
 		<div id="content_result" class="dp-none">
@@ -46,17 +52,22 @@
 </html>
 <script>
 	$('.card').click(function () {
-		let num = getRandomInt(50)
+		let num = getRandomInt(50);
 		document.getElementById("result_image").src = "./card/" + num + ".svg";
 		if (num <= 30) {
-			$('#result_bg1').removeClass("dp-none")
+			$('#result_bg1').removeClass("dp-none");
 		} else if (num <= 40) {
-			$('#result_bg2').removeClass("dp-none")
+			$('#result_bg2').removeClass("dp-none");
 		} else {
-			$('#result_bg3').removeClass("dp-none")
+			$('#result_bg3').removeClass("dp-none");
 		}
-		$('#list-card').addClass("dp-none")
-		$('#content_result').removeClass("dp-none")
+
+		$('.loader').removeClass("dp-none");
+		setTimeout(function () {
+			$('.loader').addClass("dp-none");
+		}, 3000)
+		$('#list-card').addClass("dp-none");
+		$('#content_result').removeClass("dp-none");
 		$('#back').removeClass('dp-none');
 	});
 
