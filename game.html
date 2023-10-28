@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Về</title>
+	<link rel="stylesheet" href="./style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+	<div id="content">
+    
+        <a href="/"> back</a>
+		<div id="list-card">
+			<div>
+				<image src="images/cards.png" class='card' height="50%" width="50%" />
+			</div>
+			<div>
+				<image src="images/button-select.png" class='card' height="50%" width="50%" />
+			</div>
+		</div>
+
+		<div id="content_result" class="dp-none">
+			<div class="bg-result">
+				<img id="result_bg1" class="dp-none" src="/images/bg-card1.png" alt="thong_diep1"  width="50%">
+				<img id="result_bg2" class="dp-none" src="/images/bg-card2.png" alt="thong_diep2" height="50%" width="50%">
+				<img id="result_bg3" class="dp-none" src="/images/bg-card3.png" alt="thong_diep3" height="50%" width="50%">
+			</div>
+			<div class="result">
+				<img id="result_image" alt="thong_diep" width="50%">
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+<script>
+	$('.card').click(function () {
+		let num = getRandomInt(50)
+		document.getElementById("result_image").src = "./card/" + num + ".svg";
+		if (num <= 30) {
+			$('#result_bg1').removeClass("dp-none")
+		} else if (num <= 40) {
+			$('#result_bg2').removeClass("dp-none")
+		} else {
+			$('#result_bg3').removeClass("dp-none")
+		}
+		$('#list-card').addClass("dp-none")
+		$('#content_result').removeClass("dp-none")
+		$('#back').removeClass('dp-none');
+	});
+
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * max);
+	}
+</script> 
