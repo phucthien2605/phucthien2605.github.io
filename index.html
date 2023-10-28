@@ -8,12 +8,13 @@
 	<link rel="stylesheet" href="./style.css" />
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
 	<div id="introduce" class="intro">
-		<image src="images/logo.png" height="70px" width="120px" />
+		<image src="images/logo.png" height="50%" width="50%" />
 		<p class="title">Lời giới thiệu</p>
 		<div class="content-intro">
 			<p class="text-left">Đứa trẻ nội tâm là một phần cá tính được hình thành từ các trải nghiệm có ở thời ấu thơ
@@ -33,24 +34,45 @@
 			</p>
 		</div>
 		<div class="gr-button">
-			<a href="#instruct" class="btn-overview">
+			<a href="#instruct" class="btn-overview" id="guide">
 				Tổng quan
 				<span class="icon-instruct">&gt;</span>
 			</a>
 			<a href="/game.html" class="btn-try">
-				Thử ngay 
+				Thử ngay
 				<span class="icon-try">&gt;</span>
 			</a>
 		</div>
 	</div>
 
-	<div id="instruct">
+	<div id="instruct" class="intro dp-none">
 		<p class="title">Hướng dẫn</p>
 		<image src="images/logo.png" height="50%" width="50%" />
+
+		<div class="content-intro" style="width: 100%;">
+			<p class="text-left">“về” là bộ bài muốn cùng bạn đi trên hành trình tìm về với đứa trẻ nội tâm bên trong
+				bạn.
+			</p>
+			<p class="text-left">Bên trong bộ bài này là 50 lá bài được thiết kế để khơi gợi ở bạn những cuộc đối thoại
+				với chính bản thân, những mong muốn, cảm xúc, và đặc biệt là những kí ức, trải nghiệm đã tồn tại ở sâu
+				bên trong bạn từ thuở nhỏ cho đến bây giờ. Bộ bài bao gồm 30 lá câu hỏi có tác dụng khơi gợi những kí ức
+				và trải nghiệm thời thơ ấu của bạn, 10 lá hành động nhằm khuyến khích bạn thực hiện lại những trải
+				nghiệm tốt đẹp khi còn bé và những hành động chữa lành cùng 10 lá lời khuyên sẽ cung cấp những thông
+				điệp ý nghĩa giúp bạn hiểu về đứa trẻ nội tâm của mình một cách dễ dàng hơn. Cách sử dụng “về” rất đơn
+				giản, bạn chỉ cần chọn 1 lá bài bất kì và thực hiện theo yêu cầu trong lá bài đó.
+			</p>
+			<p class="text-left">Và tin chúng mình đi, chỉ là những câu trả lời hay hành động đơn giản thôi, nhưng bộ
+				bài “về” này sẽ giúp ích cho bạn trong hành trình trở về với phần thơ bé bên trong bản thân thật gian
+				nan nhưng cũng rất quan trọng này.
+			</p>
+		</div>
 	</div>
 
 </body>
 
 </html>
 <script>
-</script> 
+	$('#guide').click(function () {
+		$('#instruct').removeClass('dp-none');
+	})
+</script>
