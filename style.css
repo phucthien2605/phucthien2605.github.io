@@ -1,7 +1,7 @@
 @font-face {
 	font-family: essay1743;
 	src: url(Essays1743.ttf);
-  }
+}
 
 html {
 	/*Adds smooth scrolling instead of snapping to element*/
@@ -41,11 +41,15 @@ body {
 }
 
 .gr-button .btn-overview,
-.gr-button .btn-try, 
+.gr-button .btn-try,
 .gr-button .btn-back {
 	border-radius: 20px;
-	padding: 13px;
+	padding: 8px 15px;
 	text-decoration: none;
+}
+
+.gr-button .btn-back {
+	padding: 13px;
 }
 
 .gr-button .btn-overview a,
@@ -57,22 +61,25 @@ body {
 
 .gr-button .btn-overview {
 	background: #bedfe4;
-	margin-right: 20%;
+	margin-right: 10%;
 }
 
-.gr-button .btn-try, 
-.gr-button .btn-back, 
+.gr-button .btn-try,
+.gr-button .btn-back,
 .gr-button .icon-instruct {
 	background: #1c2143;
 	color: #fff;
 }
 
-.icon-try, .icon-back {
+.icon-try,
+.icon-back {
 	background: #bedfe4;
 	color: #000;
 }
 
-.icon-instruct, .icon-try, .icon-back {
+.icon-instruct,
+.icon-try,
+.icon-back {
 	padding: 3px 9px;
 	border-radius: 50%;
 	margin-left: 20px;
@@ -91,17 +98,21 @@ body {
 	text-align: center;
 }
 
+#content_result {
+	height: 530px;
+}
+
 .card {
 	cursor: pointer;
+	width: 370px;
 }
 
 .result {
 	position: relative;
-	height: 445px;
-	width: 300px;
+	width: 365px;
 	margin: 0 auto;
-	bottom: 376px;
-	left: -25px;
+	bottom: 455px;
+	right: 32px;
 	z-index: 2;
 }
 
@@ -110,8 +121,7 @@ body {
 	margin: 0 auto;
 	z-index: 1;
 	background-size: cover;
-	height: 450px;
-	width: 303px;
+	width: 370px;
 }
 
 .dp-none {
@@ -146,5 +156,22 @@ body {
 	.intro {
 		height: fit-content;
 	}
-	
+
+	.card {
+		width: 303px;
+	}
+
+	.bg-result {
+		width: 303px;
+	}
+
+	.result {
+		width: 300px;
+		bottom: 376px;
+		left: -25px;
+	}
+
+	#content_result {
+		height: 450px;
+	}
 }
