@@ -43,7 +43,8 @@ body {
 
 .gr-button .btn-overview,
 .gr-button .btn-try,
-.gr-button .btn-back {
+.gr-button .btn-back,
+.gr-button .btn-continue {
 	border-radius: 20px;
 	padding: 5px 25px;
 	text-decoration: none;
@@ -53,31 +54,35 @@ body {
 
 .gr-button .btn-overview a,
 .gr-button .btn-try a,
-.gr-button .btn-back a {
+.gr-button .btn-back a,
+.gr-button .btn-continue a {
 	text-decoration: none;
 	color: #000;
 }
 
-.gr-button .btn-overview {
+.gr-button .btn-overview,
+.gr-button .btn-back {
 	background: #bedfe4;
 	margin-right: 10%;
 }
 
 .gr-button .btn-try,
-.gr-button .btn-back,
-.gr-button .icon-instruct {
+.gr-button .btn-continue,
+.gr-button .icon-instruct,
+.gr-button .icon-back {
 	background: #1c2143;
 	color: #fff;
 }
 
 .icon-try,
-.icon-back {
+.icon-continue {
 	background: #bedfe4;
 	color: #000;
 }
 
 .icon-instruct,
 .icon-try,
+.icon-continue,
 .icon-back {
 	padding: 3px 9px;
 	border-radius: 50%;
@@ -175,16 +180,19 @@ body {
 	}
 
 	.gr-button .btn-overview,
-	.gr-button .btn-try {
+	.gr-button .btn-try,
+	.gr-button .btn-back,
+	.gr-button .btn-continue {
 		padding: 3px 10px;
 	}
 
-	.gr-button .btn-overview {
+	.gr-button .btn-overview,
+	.gr-button .btn-back {
 		margin-right: 5%;
 	}
 
 	.icon-instruct,
-	.icon-try {
+	.icon-continue {
 		margin-left: 5px;
 	}
 }
