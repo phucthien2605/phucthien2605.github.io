@@ -198,6 +198,19 @@ body {
 	}
 }
 
+@media (max-width: 1368px)  {
+	#content,
+	.intro,
+	#result {
+		margin-top: 20px;
+	}
+
+	.card {
+		cursor: pointer;
+		width: 30%;
+	}
+}
+
 :root {
 	--main-color: #ecf0f1;
 	--point-color: #555;

@@ -56,7 +56,7 @@
 </html>
 <script>
 	$('.card').click(function () {
-		let num = getRandomInt(50);
+		let num = getRandomInt(49);
 		document.getElementById("result_image").src = "./card/" + num + ".svg";
 		if (num <= 30) {
 			$('#result_bg1').removeClass("dp-none");
@@ -101,6 +101,6 @@
 
 
 	function getRandomInt(max) {
-		return Math.floor(Math.random() * max);
+		return Math.floor(Math.random() * max) +1;
 	}
 </script>
