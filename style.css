@@ -202,13 +202,23 @@ body {
 	#content,
 	.intro,
 	#result {
-		margin-top: 20px;
+		margin-top: 0px;
+		padding-top: 0px;
 	}
 
 	.card {
 		cursor: pointer;
 		width: 30%;
 	}
+
+	.title {
+		margin-top: -10px;
+	}
+
+	#instruct {
+		margin-top: 20px;
+	}
+
 }
 
 :root {
